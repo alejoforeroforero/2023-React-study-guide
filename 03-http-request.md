@@ -24,3 +24,23 @@
                       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE')
                       next();
             })
+          
+ - Post request:
+
+        try{
+            const editarDireccion = `http://localhost:3000/api/`;
+            const response = await fetch(editarDireccion,{
+                method:'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify({
+                    titulo:refTitulo.current.value,
+                    respuesta:refRespuesta.current.value
+                })
+            })
+            const responseData = await response.json();
+            props.crearCard(responseData);
+        }catch(error){
+            console.log(error);
+        }  
