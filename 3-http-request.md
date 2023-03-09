@@ -1,4 +1,6 @@
-          useEffect(()=>{
+           const [cardsData, setData] = useState([]);
+           
+           useEffect(()=>{
                   const sendRequest = async()=>{
                       try{
                           const response = await fetch('http://localhost:3000/api/');
@@ -11,4 +13,4 @@
                   }  
 
                   sendRequest();
-              }, [])
+           }, [])
