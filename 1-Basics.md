@@ -6,6 +6,15 @@
          
          npm i uuid //Library to create random unique ids
          
+- Installation with Vite
+
+         npm create vite
+         npm install
+         npm run dev (Server for develpment)
+         npm run build (Deployment)
+         npm run preview(Preview of deployment)  
+         
+         
 - JSX: JavaScript extended
          
          import Component from './components/component'
